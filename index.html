@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Diri</h1>
+        <img src="file.jpg" alt="Deskripsi Foto" width="75">
+        <p><strong>Nama:</strong> Tahta Ilyarainallah</p>
+        <p><strong>Usia:</strong> 18 Tahun</p>
+        <p><strong>Email:</strong> tahtailya23@gmail.com</p>
+        <p><strong>Hobi:</strong> Membaca, Traveling, Eksplorasi</p>
+        
+        <button class="button" id="showMoreButton">More Info</button>
+        
+        <div id="moreInfo" class="hidden">
+            <p><strong>Pendidikan:</strong> Studying As a College Student at Riau University</p>
+            <p><strong>Keahlian:</strong> HTML, Leadership, Teamwork, Communication</p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/thta.ilya?igsh=ank0c3MxOWNxc3Rp" target="_self" title="pollow ig aing dong"> @tahta.ilya</a></p>
+            <p><strong>Tiktok:</strong><a href="https://www.tiktok.com/@tataaaa.ilya?is_from_webapp=1&sender_device=pc " target="_blank" title="pollow dlu gak si"> @tataaa.ilya</a></p> 
+        </div>
+
+                
+    </div>
+
+    <script>
+        document.getElementById('showMoreButton').addEventListener('click', function() {
+            const moreInfo = document.getElementById('moreInfo');
+            if (moreInfo.classList.contains('hidden')) {
+                moreInfo.classList.remove('hidden');
+                this.textContent = 'Sembunyikan';
+            } else {
+                moreInfo.classList.add('hidden');
+                this.textContent = 'Tampilkan Lebih Banyak';
+            }
+        });
+         
+        
+    </script>
+</body>
+</html>
